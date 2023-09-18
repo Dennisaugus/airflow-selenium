@@ -1,0 +1,264 @@
+[2023-09-18 18:45:17,348] {processor.py:153} INFO - Started process (PID=206) to work on /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:45:17,349] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_OOS.py for tasks to queue
+[2023-09-18 18:45:17,349] {logging_mixin.py:115} INFO - [2023-09-18 18:45:17,349] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:45:17,396] {processor.py:651} INFO - DAG(s) dict_keys(['selenium_test_dag']) retrieved from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:45:17,411] {logging_mixin.py:115} INFO - [2023-09-18 18:45:17,411] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-09-18 18:45:17,425] {processor.py:164} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 158, in _run_file_processor
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 660, in process_file
+    dagbag.sync_to_db()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 615, in sync_to_db
+    for attempt in run_with_db_retries(logger=self.log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 382, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 349, in iter
+    return fut.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 629, in sync_to_db
+    DAG.bulk_write_to_db(self.dags.values(), session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 68, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in bulk_write_to_db
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in <dictcomp>
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 376, in iterrows
+    for row in self._fetchiter_impl():
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/loading.py", line 120, in chunks
+    fetch = cursor._raw_all_rows()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/sqltypes.py", line 1816, in process
+    return loads(value)
+ValueError: unsupported pickle protocol: 5
+[2023-09-18 18:45:26,370] {processor.py:153} INFO - Started process (PID=215) to work on /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:45:26,372] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_OOS.py for tasks to queue
+[2023-09-18 18:45:26,372] {logging_mixin.py:115} INFO - [2023-09-18 18:45:26,372] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:45:26,422] {processor.py:651} INFO - DAG(s) dict_keys(['selenium_test_dag']) retrieved from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:45:26,440] {logging_mixin.py:115} INFO - [2023-09-18 18:45:26,439] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-09-18 18:45:26,453] {processor.py:164} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 158, in _run_file_processor
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 660, in process_file
+    dagbag.sync_to_db()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 615, in sync_to_db
+    for attempt in run_with_db_retries(logger=self.log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 382, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 349, in iter
+    return fut.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 629, in sync_to_db
+    DAG.bulk_write_to_db(self.dags.values(), session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 68, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in bulk_write_to_db
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in <dictcomp>
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 376, in iterrows
+    for row in self._fetchiter_impl():
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/loading.py", line 120, in chunks
+    fetch = cursor._raw_all_rows()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/sqltypes.py", line 1816, in process
+    return loads(value)
+ValueError: unsupported pickle protocol: 5
+[2023-09-18 18:45:32,468] {processor.py:153} INFO - Started process (PID=225) to work on /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:45:32,469] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_OOS.py for tasks to queue
+[2023-09-18 18:45:32,470] {logging_mixin.py:115} INFO - [2023-09-18 18:45:32,469] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:45:32,519] {processor.py:651} INFO - DAG(s) dict_keys(['selenium_test_dag']) retrieved from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:45:32,535] {logging_mixin.py:115} INFO - [2023-09-18 18:45:32,535] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-09-18 18:45:32,547] {processor.py:164} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 158, in _run_file_processor
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 660, in process_file
+    dagbag.sync_to_db()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 615, in sync_to_db
+    for attempt in run_with_db_retries(logger=self.log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 382, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 349, in iter
+    return fut.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 629, in sync_to_db
+    DAG.bulk_write_to_db(self.dags.values(), session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 68, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in bulk_write_to_db
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in <dictcomp>
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 376, in iterrows
+    for row in self._fetchiter_impl():
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/loading.py", line 120, in chunks
+    fetch = cursor._raw_all_rows()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/sqltypes.py", line 1816, in process
+    return loads(value)
+ValueError: unsupported pickle protocol: 5
+[2023-09-18 18:46:02,600] {processor.py:153} INFO - Started process (PID=244) to work on /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:46:02,602] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_OOS.py for tasks to queue
+[2023-09-18 18:46:02,603] {logging_mixin.py:115} INFO - [2023-09-18 18:46:02,602] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:46:02,668] {processor.py:651} INFO - DAG(s) dict_keys(['selenium_test_dag']) retrieved from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:46:02,681] {logging_mixin.py:115} INFO - [2023-09-18 18:46:02,681] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-09-18 18:46:02,692] {processor.py:164} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 158, in _run_file_processor
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 660, in process_file
+    dagbag.sync_to_db()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 615, in sync_to_db
+    for attempt in run_with_db_retries(logger=self.log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 382, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 349, in iter
+    return fut.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 629, in sync_to_db
+    DAG.bulk_write_to_db(self.dags.values(), session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 68, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in bulk_write_to_db
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in <dictcomp>
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 376, in iterrows
+    for row in self._fetchiter_impl():
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/loading.py", line 120, in chunks
+    fetch = cursor._raw_all_rows()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/sqltypes.py", line 1816, in process
+    return loads(value)
+ValueError: unsupported pickle protocol: 5
+[2023-09-18 18:47:11,231] {processor.py:153} INFO - Started process (PID=38) to work on /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:47:11,233] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_OOS.py for tasks to queue
+[2023-09-18 18:47:11,233] {logging_mixin.py:115} INFO - [2023-09-18 18:47:11,233] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:47:11,297] {processor.py:651} INFO - DAG(s) dict_keys(['selenium_test_dag']) retrieved from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:47:11,314] {logging_mixin.py:115} INFO - [2023-09-18 18:47:11,314] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-09-18 18:47:11,327] {processor.py:164} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 158, in _run_file_processor
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 660, in process_file
+    dagbag.sync_to_db()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 615, in sync_to_db
+    for attempt in run_with_db_retries(logger=self.log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 382, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 349, in iter
+    return fut.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 629, in sync_to_db
+    DAG.bulk_write_to_db(self.dags.values(), session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 68, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in bulk_write_to_db
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in <dictcomp>
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 376, in iterrows
+    for row in self._fetchiter_impl():
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/loading.py", line 120, in chunks
+    fetch = cursor._raw_all_rows()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/sqltypes.py", line 1816, in process
+    return loads(value)
+ValueError: unsupported pickle protocol: 5
+[2023-09-18 18:47:41,388] {processor.py:153} INFO - Started process (PID=66) to work on /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:47:41,389] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_OOS.py for tasks to queue
+[2023-09-18 18:47:41,390] {logging_mixin.py:115} INFO - [2023-09-18 18:47:41,390] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:47:41,440] {processor.py:651} INFO - DAG(s) dict_keys(['selenium_test_dag']) retrieved from /opt/airflow/dags/dag_OOS.py
+[2023-09-18 18:47:41,455] {logging_mixin.py:115} INFO - [2023-09-18 18:47:41,455] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-09-18 18:47:41,465] {processor.py:164} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 158, in _run_file_processor
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 660, in process_file
+    dagbag.sync_to_db()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 615, in sync_to_db
+    for attempt in run_with_db_retries(logger=self.log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 382, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 349, in iter
+    return fut.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 629, in sync_to_db
+    DAG.bulk_write_to_db(self.dags.values(), session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 68, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in bulk_write_to_db
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2416, in <dictcomp>
+    most_recent_runs = {run.dag_id: run for run in most_recent_runs_iter}
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 376, in iterrows
+    for row in self._fetchiter_impl():
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/loading.py", line 120, in chunks
+    fetch = cursor._raw_all_rows()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/result.py", line 400, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/sqltypes.py", line 1816, in process
+    return loads(value)
+ValueError: unsupported pickle protocol: 5

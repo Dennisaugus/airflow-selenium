@@ -1,0 +1,23 @@
+[2023-09-18 18:47:11,083] {manager.py:480} INFO - Processing files using up to 2 processes at a time 
+[2023-09-18 18:47:11,083] {manager.py:481} INFO - Process each file at most once every 30 seconds
+[2023-09-18 18:47:11,083] {manager.py:483} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2023-09-18 18:47:11,083] {manager.py:690} INFO - Searching for files in /opt/airflow/dags
+[2023-09-18 18:47:11,084] {manager.py:693} INFO - There are 1 files in /opt/airflow/dags
+[2023-09-18 18:47:11,236] {manager.py:809} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/dag_OOS.py     38  0.01s             0           0
+================================================================================
+[2023-09-18 18:47:11,339] {manager.py:925} ERROR - Processor for /opt/airflow/dags/dag_OOS.py exited with return code 1.
+[2023-09-18 18:47:41,294] {manager.py:809} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/dag_OOS.py                           0          -1  0.12s           2023-09-18T18:47:11
+================================================================================
+[2023-09-18 18:47:41,473] {manager.py:925} ERROR - Processor for /opt/airflow/dags/dag_OOS.py exited with return code 1.
